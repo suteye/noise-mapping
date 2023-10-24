@@ -1,0 +1,14 @@
+{
+  "name": "noise-mapping",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "server": "yarn --cwd ./backend dev",
+    "client": "yarn --cwd ./frontend dev",
+    "dev": "concurrently -k \"yarn run server\" \"yarn run client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

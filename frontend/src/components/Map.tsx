@@ -8,7 +8,6 @@ import "leaflet/dist/leaflet.css";
 
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import ReactDOMServer from "react-dom/server";
 
 

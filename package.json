@@ -4,9 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "server": "yarn --cwd ./backend dev",
-    "client": "yarn --cwd ./frontend dev",
-    "dev": "concurrently -k \"yarn run server\" \"yarn run client\""
+    "server": "npm run dev --prefix backend",
+    "client": "npm run dev --prefix frontend",
+    "dev": "concurrently -k \"npm run server\" \"npm run client\""
   },
   "devDependencies": {
     "concurrently": "^8.2.2"

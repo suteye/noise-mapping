@@ -18,8 +18,13 @@ function App() {
     }
   };
 
+  // useEffect(() => {
+  //   axios.get("http://localhost:8080/api/v1/audio/").then((res) => {
+  //     setData(res.data);
+  //   });
+  // }, []);
   useEffect(() => {
-    axios.get("http://localhost:8080/api/v1/audio/").then((res) => {
+    axios.get("https://tame-red-turtle-robe.cyclic.app/api/v1/audio/").then((res) => {
       setData(res.data);
     });
   }, []);

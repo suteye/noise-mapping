@@ -6,7 +6,7 @@ interface FilterProps {
 
 const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
   const [loudnessFilter, setLoudnessFilter] = useState("");
-  const [timeRangeFilter, setTimeRangeFilter] = useState("1M");
+  const [timeRangeFilter, setTimeRangeFilter] = useState("");
 
   const handleTimeRangeClick = (timeRange: string) => {
     setTimeRangeFilter(timeRange);

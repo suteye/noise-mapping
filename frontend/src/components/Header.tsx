@@ -1,6 +1,7 @@
 import { Transition } from '@headlessui/react';
 import  { useState } from 'react'
 import { Link } from 'react-router-dom';
+import TonkitLOGO from '../public/images/TONKIT3_lastversion.png';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ const Header = () => {
                 <div className="flex-shrink-0">
                   <img
                     className="h-[60px] w-[60px]"
-                    src="../public/images/TONKIT3_lastversion.png"
+                    src={TonkitLOGO}
                     alt="TONKIT Lab"
                   />
                 </div>

@@ -18,16 +18,20 @@ function App() {
     }
   };
 
+  useEffect(() => {
+    axios.get("http://localhost:8080/api/v1/audio/").then((res) => {
+      // Filter out data entries with invalid or missing coordinates
+      const validData = res.data.filter(
+        (item: { Latitude?: number; Longitude?: number }) => item.Latitude !== undefined && item.Longitude !== undefined
+      );
+      setData(validData);
+    });
+  }, []);
   // useEffect(() => {
-  //   axios.get("http://localhost:8080/api/v1/audio/").then((res) => {
+  //   axios.get("https://tame-red-turtle-robe.cyclic.app/api/v1/audio/").then((res) => {
   //     setData(res.data);
   //   });
   // }, []);
-  useEffect(() => {
-    axios.get("https://tame-red-turtle-robe.cyclic.app/api/v1/audio/").then((res) => {
-      setData(res.data);
-    });
-  }, []);
   return (
     <>
       {/* Header */}
